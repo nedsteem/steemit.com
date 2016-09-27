@@ -138,11 +138,11 @@ export default class PostSummary extends React.Component {
                     {content_body}
                     <div className="PostSummary__footer">
                         <Voting post={post} showList={false} />
-                        <span className="PostSummary__time_author_category show-for-medium">
-                            <TimeAuthorCategory post={p} authorRepLog10={authorRepLog10} />
-                            {!archived && <Reblog author={p.author} permlink={p.permlink} />}
-                        </span>
                         <VotesAndComments post={post} commentsLink={comments_link} />
+                        <span className="PostSummary__time_author_category show-for-medium">
+                            {!archived && <Reblog author={p.author} permlink={p.permlink} />}
+                            <TimeAuthorCategory post={p} authorRepLog10={authorRepLog10} />
+                        </span>
                     </div>
                 </div>
             </article>
